@@ -125,6 +125,7 @@ menuMobile.addEventListener("click", function (e) {
   menuMobileOpenClose();
 });
 
+var goTop = document.querySelector(".ll-menu-top nav a");
 if (window.DeviceOrientationEvent) {
   window.addEventListener(
     "orientationchange",
@@ -146,3 +147,7 @@ function activateFullscreen(element) {
     element.msRequestFullscreen(); // IE/Edge
   }
 }
+
+window.addEventListener("load", function (e) {
+  goTop.click();
+});
