@@ -125,6 +125,12 @@ menuMobile.addEventListener("click", function (e) {
   menuMobileOpenClose();
 });
 
-window.onorientationchange = function () {
-  window.location.reload();
-};
+if (window.DeviceOrientationEvent) {
+  window.addEventListener(
+    "orientationchange",
+    function () {
+      location.reload();
+    },
+    false
+  );
+}
