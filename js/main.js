@@ -41,7 +41,8 @@ const slideTranslate = () => {
   anime({
     targets: abilitiesScroll,
     translateX: sliderPos,
-    easing: "cubicBezier(0,1.01,.32,1)",
+    duration: 600,
+    easing: "cubicBezier(.33,1.47,.7,-0.56)",
   });
 };
 var backTrans = () => {
