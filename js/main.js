@@ -149,5 +149,7 @@ function activateFullscreen(element) {
 }
 
 window.addEventListener("load", function (e) {
-  goTop.click();
+  setTimeout(() => {
+    goTop.click();
+  }, 1000);
 });
