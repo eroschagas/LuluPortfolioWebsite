@@ -125,7 +125,6 @@ menuMobile.addEventListener("click", function (e) {
   menuMobileOpenClose();
 });
 
-var goTop = document.querySelector(".ll-menu-top nav a");
 if (window.DeviceOrientationEvent) {
   window.addEventListener(
     "orientationchange",
@@ -148,8 +147,9 @@ function activateFullscreen(element) {
   }
 }
 
+var goTop = document.querySelector(".ll-menu-top nav a");
 window.addEventListener("load", function (e) {
   setTimeout(() => {
     goTop.click();
-  }, 1000);
+  }, 100);
 });
