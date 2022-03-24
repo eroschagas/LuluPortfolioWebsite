@@ -12,7 +12,7 @@ var sliderListWidth;
 var sliderPos = 0;
 var sliderCounter = 1;
 var skinCircle = document.querySelectorAll(".ll-skin-circle");
-var skin = document.querySelector(".ll-skin img");
+var skin = document.querySelector(".ll-skin");
 const menuMobileIcon = document.querySelector(".ll-menu-top-mobile ion-icon");
 const menuMobile = document.querySelector(".ll-menu-top-mobile");
 const menuMobileItems = document.querySelectorAll(".ll-menu-item-mobile");

@@ -411,32 +411,24 @@ p {
   width: calc(100% - 6rem);
   margin: 0rem 3rem;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
-  text-align: center;
+  align-items: center;
 }
 .ll-skin {
-  max-height: calc(100% - 1rem);
-  width: 100%;
-  text-align: center;
-}
-.ll-skin img {
   max-width: 100%;
-  max-height: 100%;
+  max-height: calc(100% - 6.3rem);
+  height: auto;
+  width: auto;
   border-radius: 2rem;
   padding-top: 1rem;
+  padding: 2rem;
 }
-
 .ll-skin-selector {
+  height: fit-content;
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  flex-direction: column;
-  margin: 0rem;
-  padding: 1rem;
-  position: relative;
-  z-index: 20;
-  overflow: auto;
+  flex-wrap: wrap;
+  justify-content: center;
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
@@ -563,9 +555,6 @@ p {
     height: calc(100vh - 20rem);
     width: calc(100% - 6rem);
   }
-  .ll-skin {
-    max-height: calc(100% - 1rem);
-  }
 }
 
 @media (max-width: 1000px) {
@@ -573,7 +562,6 @@ p {
     font-size: 62.5%;
     scroll-behavior: auto;
   }
-
   h1 {
     font-size: 2rem;
   }
@@ -621,9 +609,6 @@ p {
     height: calc(100vh - 13rem);
     width: calc(100% - 6rem);
   }
-  .ll-skin {
-    max-height: calc(100% - 1rem);
-  }
   h4 {
     font-size: 3rem;
   }
@@ -636,6 +621,21 @@ p {
   }
   .ll-info p {
     font-size: 1.5rem;
+  }
+  .ll-lore {
+    height: calc(100vh - 13rem);
+  }
+  .ll-lore:before {
+    right: 2.5rem;
+    bottom: 1.5rem;
+  }
+
+  .ll-skin-circle {
+    height: 3rem;
+    width: 3rem;
+  }
+  .ll-skin {
+    padding: 0.5rem;
   }
 }
 @media (max-width: 800px) {
@@ -742,25 +742,6 @@ p {
   }
 }
 @media (max-width: 570px) {
-  /*   .ll-responsive-img {
-    background-image: url(../img/wallpaper1-480p.png);
-  }
-  .ll-responsive-img-link-lulu {
-    background-image: url(../img/Lulu_OriginalSkin_luluglow480p.png);
-  }
-  .ll-responsive-img-link-pixie {
-    background-image: url(../img/Lulu_OriginalSkin_pixieglow480p.png);
-  }
-  #abilities {
-    background-image: url(../img/wallpaper2-480p.jpg);
-  }
-  #lore {
-    background-image: url(../img/wallpaper3-480p.jpg);
-  }
-  #skins {
-    background-image: url(../img/wallpaper4-480p.jpg);
-  }
- */
   .ll-abilities {
     flex-direction: column;
   }
@@ -811,13 +792,6 @@ p {
     right: 2.5rem;
     bottom: 1.5rem;
   }
-  .ll-skin-selector {
-    width: 20%;
-  }
-  .ll-skin-selector img {
-    height: 3rem;
-    width: 3rem;
-  }
   .ll-menu-top nav a h1:first-child {
     display: none;
   }
@@ -839,9 +813,6 @@ p {
     align-items: center;
     width: calc(100% - 4rem);
   }
-  .ll-skin img {
-    padding-right: 1rem;
-  }
 }
 @media (max-width: 325px) {
   .ll-abilities-container {
@@ -862,7 +833,6 @@ p {
     font-size: 1.2rem;
   }
 }
-
 .ll-display-block {
   display: block;
 }
