@@ -134,9 +134,15 @@ if (window.DeviceOrientationEvent) {
     false
   );
 }
-window.addEventListener("load", function () {
-  setTimeout(function () {
-    // This hides the address bar:
-    window.scrollTo(0, 1);
-  }, 0);
-});
+
+function activateFullscreen(element) {
+  if (element.requestFullscreen) {
+    element.requestFullscreen(); // W3C spec
+  } else if (element.mozRequestFullScreen) {
+    element.mozRequestFullScreen(); // Firefox
+  } else if (element.webkitRequestFullscreen) {
+    element.webkitRequestFullscreen(); // Safari
+  } else if (element.msRequestFullscreen) {
+    element.msRequestFullscreen(); // IE/Edge
+  }
+}
