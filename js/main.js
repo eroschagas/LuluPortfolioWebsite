@@ -132,6 +132,6 @@ window.onorientationchange = function () {
     case 90:
     case -90:
       window.location.reload();
-      break;
+      return;
   }
 };
