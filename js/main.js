@@ -126,25 +126,29 @@ menuMobile.addEventListener("click", function (e) {
 });
 
 if (window.DeviceOrientationEvent) {
-  window.addEventListener(
-    "orientationchange",
-    function () {
-      location.reload();
-    },
-    false
-  );
+  setTimeout(() => {
+    window.addEventListener(
+      "orientationchange",
+      function () {
+        location.reload();
+      },
+      false
+    );
+  }, 100);
 }
 
 function activateFullscreen(element) {
-  if (element.requestFullscreen) {
-    element.requestFullscreen(); // W3C spec
-  } else if (element.mozRequestFullScreen) {
-    element.mozRequestFullScreen(); // Firefox
-  } else if (element.webkitRequestFullscreen) {
-    element.webkitRequestFullscreen(); // Safari
-  } else if (element.msRequestFullscreen) {
-    element.msRequestFullscreen(); // IE/Edge
-  }
+  setTimeout(() => {
+    if (element.requestFullscreen) {
+      element.requestFullscreen(); // W3C spec
+    } else if (element.mozRequestFullScreen) {
+      element.mozRequestFullScreen(); // Firefox
+    } else if (element.webkitRequestFullscreen) {
+      element.webkitRequestFullscreen(); // Safari
+    } else if (element.msRequestFullscreen) {
+      element.msRequestFullscreen(); // IE/Edge
+    }
+  }, 100);
 }
 
 var goTop = document.querySelector(".ll-menu-top nav a");
